@@ -1,4 +1,3 @@
-import { Input } from 'postcss';
 import './App.css';
 import {useState} from 'react'
 import { IoCloudCircleSharp } from "react-icons/io5";
@@ -13,42 +12,25 @@ function App() {
   const [giftcard,setGiftcard] = useState(false);
   const [crypto,setCrypto] = useState(false)
   const [nft,setNft] = useState(false)
-  const[disable,setDisable] = useState(false)
+
   const handleSwap=()=>{
-    if(giftcard & crypto & nft === disable ){
-      setShow(show)
-    }else{
-      
-      setShow(!show)
-    }
-    
+    setShow(!show)
      console.log('checking my click event')
+     
     
   }
   const handleCard=()=>{
-    if(giftcard & crypto & show  === disable){
-      setGiftcard(giftcard)
-    }else{
-      
-      setGiftcard(!giftcard)
-    }
     
-  
+      setGiftcard(!giftcard)
+   
  }
  const handleCrypto=()=>{
-  if(giftcard & nft & show  === disable){
-    setCrypto(crypto)
-  }else{
-    setCrypto(!crypto)
-  }
+  setCrypto(!crypto)
+  
  
 }
 const handleNft=()=>{
-  if(giftcard & crypto & show  === disable){
-    setNft(nft)
-  }else{
-    setNft(!nft)
-  }
+  setNft(!nft)
 
 }
   return (
